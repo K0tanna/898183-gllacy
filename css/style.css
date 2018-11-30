@@ -158,29 +158,14 @@ li.login:hover .popup-login,
 }
 
 .subscription-form input:hover {
+  color: #c7c6c5;
   border: 2px solid #c7c6c5;
 }
 
 .subscription-form input:focus {
+  color: #c7c6c5;
   border: 2px solid #8fbdec;
 }
-
-/* Цвет placeholder */
-.subscription-form input::-moz-placeholder {
-  color: #c7c6c5; 
-}
-.subscription-form input::-webkit-input-placeholder { 
-  color: #c7c6c5; 
-}
-.subscription-form input:-ms-input-placeholder { 
-  color: #c7c6c5;
-}
-.subscription-form input::-ms-input-placeholder { 
-  color: #c7c6c5;
-}
-.subscription-form input::placeholder { 
-  color: #c7c6c5;
-} 
 
 .button {
   font-size: 18px;
