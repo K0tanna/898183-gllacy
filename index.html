@@ -132,14 +132,16 @@
             <li><a class="social-link social-link-vk" href="#">Вконтакте</a></li>
           </ul>
         </div>
-        <ul class="additional-navigation">
-          <li class="provider">
-            <a href="#">Для поставщиков</a>
-          </li>
-          <li><a href="#">О произодстве</a></li>
-          <li><a href="#">Наши документы</a></li>
-          <li><a href="#">Экологические стандарты</a></li>
-        </ul>
+        <div class="additional-navigation">
+          <ul>
+            <li class="provider">
+              <a href="#">Для поставщиков</a>
+            </li>
+            <li><a href="#">О произодстве</a></li>
+            <li><a href="#">Наши документы</a></li>
+            <li><a href="#">Экологические стандарты</a></li>
+          </ul>
+        </div>
         <p class="footer-copyright">
           <a class="htmlacademy-logo" href="https://htmlacademy.ru/intensive/htmlcss">
             <img src="img/htmlacademy-logo.svg" width="108" height="39" alt="Логотип HTML Academy">
@@ -151,27 +153,27 @@
       </footer>
     </div>
     <section class="modal modal-feedback">
-        <h2 class="modal-title">Мы обязательно вам ответим!</h2>
-        <form class="feedback-form" action="#" method="post">
-          <p>
-            <label class="visually-hidden" for="user-name">Имя</label>
-            <input class="feedback-field" id="user-name" type="text" name="name" placeholder="Как вас зовут?">
-          </p>
-          <p>
-            <label class="visually-hidden" for="feedback-email">Электронная почта</label>
-            <input class="feedback-field" id="feedback-email" type="email" name="feedback-email" placeholder="Ваша почта для ответа?">
-          </p>
-          <p>
-            <label class="visually-hidden" for="feedback-comment">Комментарий</label>
-            <textarea class="feedback--form-comment" name="feedback-comment" id="feedback-comment" placeholder="Напишите что-нибудь..."></textarea>
-          </p>
-          <button class="button feedback-button" type="submit" name="feedback-button">
-          Отправить
-          </button>
-        </form>
-        <button class="modal-close" type="button">
-        Закрыть
+      <h2 class="modal-title">Мы обязательно вам ответим!</h2>
+      <form class="feedback-form" action="#" method="post">
+        <p>
+          <label class="visually-hidden" for="user-name">Имя</label>
+          <input class="feedback-field" id="user-name" type="text" name="name" placeholder="Как вас зовут?">
+        </p>
+        <p>
+          <label class="visually-hidden" for="feedback-email">Электронная почта</label>
+          <input class="feedback-field" id="feedback-email" type="email" name="feedback-email" placeholder="Ваша почта для ответа?">
+        </p>
+        <p>
+          <label class="visually-hidden" for="feedback-comment">Комментарий</label>
+          <textarea class="feedback--form-comment" name="feedback-comment" id="feedback-comment" placeholder="Напишите что-нибудь..."></textarea>
+        </p>
+        <button class="button feedback-button" type="submit" name="feedback-button">
+        Отправить
         </button>
-      </section>
+      </form>
+      <button class="modal-close" type="button">
+      Закрыть
+      </button>
+    </section>
   </body>
 </html>
