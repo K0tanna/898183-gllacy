@@ -11,70 +11,74 @@
     <div class="page-wrapper">
       <header class="main-header">
         <nav class="main-navigation">
-          <a class="main-header-logo">
-            <img src="img/logo.svg" width="154" height="64" alt="Логотип Gllacy Shop">
-          </a>
-          <ul class="site-navigation">
-            <li class="menu-item">
-              <a>Каталог</a>
-              <ul class="submenu">
-                <li class="submenu-item submenu-item-new">
-                  <a href="#">Новинки</a>
-                </li>
-                <li class="submenu-item">
-                  <a href="catalog.html">Сливочное</a>
-                </li>
-                <li class="submenu-item">
-                  <a href="#">Щербеты</a>
-                </li>
-                <li class="submenu-item">
-                  <a href="#">Фруктовый лед</a>
-                </li>
-                <li class="submenu-item">
-                  <a href="#">Мелорин</a>
-                </li>
-              </ul>
-            </li>
-            <li><a href="#">Доставка и оплата</a></li>
-            <li><a href="#">О Компании</a></li>
-          </ul>
-          <ul class="user-navigation">
-            <li class="search">
-              <a>Поиск</a>
-              <div class="popup popup-search">
-                <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-                  <label class="visually-hidden" for="search">Поиск</label>
-                  <input type="search" name="search" id="search" placeholder="Что ищем?">
-                </form>
-              </div>
-            </li>
-            <li class="login">
-              <a>Вход</a>
-              <div class="popup popup-login">
-                <h2 class="visually-hidden">Личный кабинет</h2>
-                <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-                  <p>
-                    <label class="visually-hidden" for="user-email">Электронная почта</label>
-                    <input class="login-field" id="user-email" type="email" name="user-email" placeholder="Электронная почта">
-                  </p>
-                  <p>
-                    <label class="visually-hidden" for="user-password">Пароль</label>
-                    <input class="login-field" id="user-password" type="password" name="password" placeholder="Пароль">
-                  </p>
-                  <button class="button login-button" type="submit" name="login-button">
-                  Войти
-                  </button>
-                </form>
-                <div class="login-links">
-                  <a href="#">Забыли пароль?</a>
-                  <a href="#">Новая регистрация</a>
+          <div class="main-navigation-wrapper">
+            <a class="main-header-logo">
+              <img src="img/logo.svg" width="154" height="64" alt="Логотип Gllacy Shop">
+            </a>
+            <ul class="site-navigation">
+              <li class="menu-item" tabindex="0">
+                <a>Каталог</a>
+                <ul class="submenu">
+                  <li class="submenu-item submenu-item-new">
+                    <a href="#">Новинки</a>
+                  </li>
+                  <li class="submenu-item">
+                    <a href="catalog.html">Сливочное</a>
+                  </li>
+                  <li class="submenu-item">
+                    <a href="#">Щербеты</a>
+                  </li>
+                  <li class="submenu-item">
+                    <a href="#">Фруктовый лед</a>
+                  </li>
+                  <li class="submenu-item">
+                    <a href="#">Мелорин</a>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="#">Доставка и оплата</a></li>
+              <li><a href="#">О Компании</a></li>
+            </ul>
+          </div>
+          <div class="main-navigation-wrapper">
+            <ul class="user-navigation">
+              <li class="search" tabindex="0">
+                <a>Поиск</a>
+                <div class="popup popup-search">
+                  <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+                    <label class="visually-hidden" for="search">Поиск</label>
+                    <input type="search" name="search" id="search" placeholder="Что ищем?">
+                  </form>
                 </div>
-              </div>
-            </li>
-            <li class="basket">
-              <a href="#">Корзина</a>
-            </li>
-          </ul>
+              </li>
+              <li class="login" tabindex="0">
+                <a>Вход</a>
+                <div class="popup popup-login">
+                  <h2 class="visually-hidden">Личный кабинет</h2>
+                  <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+                    <p>
+                      <label class="visually-hidden" for="user-email">Электронная почта</label>
+                      <input class="login-field" id="user-email" type="email" name="user-email" placeholder="Электронная почта">
+                    </p>
+                    <p>
+                      <label class="visually-hidden" for="user-password">Пароль</label>
+                      <input class="login-field" id="user-password" type="password" name="password" placeholder="Пароль">
+                    </p>
+                    <button class="button login-button" type="submit" name="login-button">
+                    Войти
+                    </button>
+                  </form>
+                  <div class="login-links">
+                    <a href="#">Забыли пароль?</a>
+                    <a href="#">Новая регистрация</a>
+                  </div>
+                </div>
+              </li>
+              <li class="basket">
+                <a href="#">Корзина</a>
+              </li>
+            </ul>
+          </div>
         </nav>
         <p class="contacts">
           С 10 до 20, ежедневно
@@ -100,24 +104,26 @@
             </li>
           </ul>
         </section>
-        <div class="news-wrapper">
-          <article class="news">
-            <h2 class="news-title">Новое в нашем блоге</h2>
-            <a href="#" class="news-link">10 способов сервировки фруктовых щербетов к столу</a>
-          </article>
-        </div>
-        <div class="news-wrapper">
-          <section class="subscription">
-            <h2 class="visually-hidden">Подписка</h2>
-            <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
-            <form class="subscription-form" action="https://echo.htmlacademy.ru" method="post">
-              <p>
-                <label class="visually-hidden" for="subscription-email">Электронная почта</label>
-                <input class="subscription-form-email" id="subscription-email" type="email" name="subscription-email" placeholder="Электронная почта">
-              </p>
-              <button class="button subscription-button" type="submit" name="subscription-button">Отправить</button>
-            </form>
-          </section>
+        <div class="column-wrapper">
+          <div class="news-wrapper">
+            <article class="news">
+              <h2 class="news-title">Новое в нашем блоге</h2>
+              <a href="#" class="news-link">10 способов сервировки фруктовых щербетов к столу</a>
+            </article>
+          </div>
+          <div class="news-wrapper">
+            <section class="subscription">
+              <h2 class="visually-hidden">Подписка</h2>
+              <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
+              <form class="subscription-form" action="https://echo.htmlacademy.ru" method="post">
+                <p>
+                  <label class="visually-hidden" for="subscription-email">Электронная почта</label>
+                  <input class="subscription-form-email" id="subscription-email" type="email" name="subscription-email" placeholder="Электронная почта">
+                </p>
+                <button class="button subscription-button" type="submit" name="subscription-button">Отправить</button>
+              </form>
+            </section>
+          </div>
         </div>
       </main>
     </div>
