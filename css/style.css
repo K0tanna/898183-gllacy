@@ -1,3 +1,13 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
 	margin: 0;
 
@@ -8,6 +18,18 @@ body {
 	color: #ffffff;
 
 	background-color: #849d8f;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 a {
@@ -44,11 +66,7 @@ a {
 
 .main-navigation {
   display: flex;
-  justify-content: space-between;
   margin-top: 10px;
-  margin-bottom: 0;
-  
-
 }
 
 .main-heder-logo {
@@ -56,8 +74,18 @@ a {
   height: 64
 }
 
+.user-navigation {
+  display: flex;
+  list-style: none;
+  margin-left: auto;
+  padding: 0;
+}
+
+.site-navigation {
+  display: flex;
+}
+
 .site-navigation,
-.user-navigation,
 .submenu {
 	list-style: none;
   margin: 0;
@@ -85,7 +113,7 @@ a {
 .menu-item:hover .submenu,
 .menu-item:focus .submenu,  
 .submenu:hover {
-  display:block;
+  display: block;
 }
 
 .submenu {
@@ -169,17 +197,6 @@ a {
   color: #ffffff;
 }
 
-.column-wrapper {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 40px;
-}
-
-.news-wrapper {
-  width: 560px;
-  box-sizing: border-box;
-}
-
 .features {
   margin-bottom: 40px;
   padding: 26px 34px 28px 30px;
@@ -191,6 +208,8 @@ a {
 }
 
 .features-list {
+  display: flex;
+  justify-content: space-between;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -202,18 +221,28 @@ a {
   font-weight: 500;
 }
 
+.feature-item {
+  width: 50%;
+}
+
+.column-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+
 .news {
+  width: 560px;
+  margin-bottom: 20px;
   padding-top: 25px;
   padding-left: 18px;
   min-height: 220px;
-
   color: #323232;
   background-color: #ffffff;
   background-image: url("../img/strawberry.jpg");
   background-repeat: no-repeat;
   background-size: 560px 220px;
-  box-sizing: border-box;
-}
+  }
 
 .news-title {
   margin: 0;
@@ -232,13 +261,11 @@ a {
 }
 
 .subscription {
+  width: 560px;
+  margin-bottom: 20px;
   padding: 30px 20px 35px 20px;
   background-color: #f8f7f4;
   }
-
-.subscription h2 {
-  margin: 0;
-}
 
 .subscription p {
   color: #5a5a5a;
@@ -264,8 +291,7 @@ a {
 .page-title {
   margin: 0;
   margin-bottom: 35px;
-  padding: 0;
-}
+ }
 
 .breadcrumbs {
   list-style: none;
@@ -300,19 +326,16 @@ a {
   margin: 0;
   margin-bottom: 80px;
   padding: 0;
-
-  /*width: 1146px;*/
 }
 
 .catalog-item {
   width: 267px;
   margin-bottom: 40px;
-  margin-right: 26px;
   color: #ffffff;
 }
 
-.catalog-item:nth-child(4n) {
-  margin-right: 0;
+.catalog-item:not(:nth-child(4n)) {
+  margin-right: 26px;
 }
 
 .catalog-item:hover {
@@ -404,11 +427,14 @@ a {
 }
 
 .footer-copyright {
-  width: 190px;
   margin-left: auto;
   font-size: 12px;
   line-height: 18px;
   color: #ffffff;
+}
+
+.htmlacademy-logo {
+  display: block;
 }
 
 .copyright-link {
