@@ -59,7 +59,7 @@ a {
 }
 
 .page-wrapper {
-  width: 1146px;
+  width: 1200px;
   margin: 0 auto;
   padding: 0 27px;
 }
@@ -130,6 +130,10 @@ a {
 
 .submenu-item-new a {
   font-weight: 700;
+}
+
+.submenu-item-current {
+  pointer-events: none;
 }
 
 .submenu .submenu-item:hover,
@@ -210,6 +214,7 @@ a {
 .features-list {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -223,6 +228,7 @@ a {
 
 .feature-item {
   width: 50%;
+  margin-bottom: 26px;
 }
 
 .column-wrapper {
@@ -239,9 +245,9 @@ a {
   min-height: 220px;
   color: #323232;
   background-color: #ffffff;
-  background-image: url("../img/strawberry.jpg");
+  background-image: url("../img/strawberry-big.jpg");
   background-repeat: no-repeat;
-  background-size: 560px 220px;
+  background-size: cover;
   }
 
 .news-title {
@@ -367,6 +373,10 @@ a {
 .catalog-item a:focus {
   color: #ffbc9e;
   border-bottom: 1px solid rgba(255, 188, 158, 0.3);
+}
+
+.catalog-item img {
+  border-radius: 50%;
 }
 
 .catalog-item-price {
