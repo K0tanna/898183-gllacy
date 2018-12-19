@@ -62,6 +62,7 @@ img {
 .button:focus{
   background-image: linear-gradient(180deg, #f58669 0%, #ec6f5e 100%);
   box-shadow: 0px 2px 2px 0px #ac1000;
+  outline: none;
 }
 
 .button:active {
@@ -124,6 +125,7 @@ img {
   padding: 7px 14px;
   background-color: #f7f6f3;
   border-radius: 15px;
+  outline: none;
 }
 
 .menu-item > a[href]:active{
@@ -151,6 +153,7 @@ img {
 .menu-item:focus .submenu,  
 .submenu:hover {
   display: block;
+  outline: none;    
 }
 
 .submenu {
@@ -207,6 +210,7 @@ img {
 .submenu-item a:hover,
 .submenu-item a:focus {
   background-color: #fbded7;
+  outline: none;
 }
 
 .submenu-item a:active {
@@ -240,6 +244,7 @@ img {
 .user-navigation a:focus {
   color: #323232;
   background-color: #f8f7f4;
+  outline: none;
 }
 
 .search,
@@ -405,6 +410,7 @@ img {
   color: #e84d37;
   -webkit-text-decoration: underline rgba(232, 77, 55, 0.3);
   text-decoration: underline rgba(232, 77, 55, 0.3);
+  outline: none;
 }
 
 .search:hover .popup-search,
@@ -776,6 +782,7 @@ img {
 .breadcrumbs a:focus {
   color: #ffbc9e;
   border-bottom: 1px solid rgba(255, 188, 158, 0.3);
+  outline: none;
 }
 
 .page-title {
@@ -869,6 +876,7 @@ img {
 .catalog-item a:focus {
   color: #ffbc9e;
   border-bottom: 1px solid rgba(255, 188, 158, 0.3);
+  outline: none;
 }
 
 .catalog-item::before {
@@ -895,24 +903,31 @@ img {
 }
 
 .map {
+  position: relative;
   width: 100%;
   height: 430px;
   text-align: center;
   background-color: #f2ebd3;
 }
 
+.map iframe {
+  position: absolute;
+  width: 100%;
+  left: 0;
+
+}
+
 .main-footer {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-top: 23px;
+  padding-top: 23px;
   padding-bottom: 29px;
 }
 
 .map-contacts {
   position: absolute;
-  top: -390px;
+  top: -367px;
   right: 0;
   padding: 30px 25px;
   width: 302px;
@@ -936,7 +951,7 @@ img {
 .contacts-details {
   display: block;
   margin: 0;
-padding-bottom: 2px;
+  padding-bottom: 2px;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
@@ -946,7 +961,7 @@ padding-bottom: 2px;
 }
 
 .feedback-call-button {
-  padding: 10px 27px;
+  padding: 10px 26px;
   text-align: center;
 }
 
@@ -992,6 +1007,7 @@ padding-bottom: 2px;
 .social-link:hover,
 .social-link:focus {
   opacity: 1;
+  outline: none;
 }
 
 .social-link:active {
@@ -1002,6 +1018,7 @@ padding-bottom: 2px;
 
 .additional-navigation {
   width: 337px;
+  margin: 0 auto;
 }
 
 .additional-navigation-list {
@@ -1040,6 +1057,7 @@ padding-bottom: 2px;
 .additional-navigation a:focus {
   color: #ffbc9e;
   border-bottom: 1px solid rgba(255, 188, 158, 0.3); 
+  outline: none;
 }
 
 .provider a:hover svg,
@@ -1070,16 +1088,52 @@ padding-bottom: 2px;
 .copyright-link:focus {
   color: #ffbc9e;
   border-bottom: 1px solid rgba(255, 188, 158, 0.3);
+  outline: none;
 }
 
 /*Всплывающая форма*/
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 7;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.overlay-show {
+  display: block;
+}
+
+@keyframes increase {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes decrease {
+  0% {
+    transform: scale(1);
+   }
+  50% {
+    transform: scale(0.6);
+  }
+   100% {
+    transform: scale(1);
+   }
+}
 
 .modal {
   display: none;
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translateY(-50%);
   z-index: 8;
   color: #000000;
   background-color: #f8f7f4;
@@ -1087,9 +1141,19 @@ padding-bottom: 2px;
 
 .modal-feedback {
   width: 480px;
+  margin-top: -220px;
   margin-left: -240px;
   padding: 15px 25px;
   border-radius: 10px;
+}
+
+.modal-show {
+  display: block;
+  animation: increase 0.4s;
+}
+
+.modal-error {
+  animation: decrease 0.7s;
 }
 
 .modal-close {
@@ -1102,6 +1166,7 @@ padding-bottom: 2px;
   background: url("../img/cross-big.svg") no-repeat 50% 50%;
   border:0;
   cursor: pointer;
+
 }
 
 .modal-title {
@@ -1142,6 +1207,21 @@ padding-bottom: 2px;
   height: 155px;
 }
 
+.feedback-field::-webkit-input-placeholder,
+.feedback-form-comment::-webkit-input-placeholder {
+  font-weight: 400;
+  color: #999999;  
+}
+.feedback-field:-ms-input-placeholder,
+.feedback-form-comment:-ms-input-placeholder {
+  font-weight: 400;
+  color: #999999;  
+}
+.feedback-field::-ms-input-placeholder,
+.feedback-form-comment::-ms-input-placeholder {
+  font-weight: 400;
+  color: #999999;  
+}
 
 .feedback-field::placeholder,
 .feedback-form-comment::placeholder {
@@ -1159,22 +1239,12 @@ padding-bottom: 2px;
 .feedback-form-comment:focus {
   font-weight: 400;
   box-shadow: inset 0 0 0 2px #8fbdec;
+  outline: none;
 }
 
 .feedback-button {
   margin-bottom: 10px;
   padding: 10px 25px;
   float: right;
-}
-
-.overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 7;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
 }
 
