@@ -21,7 +21,6 @@ try {
 
 link.addEventListener("click", function (evt) {
 	evt.preventDefault();
-  console.log("Открыть форму");
   modal.classList.add("modal-show");
   overlay.classList.add("overlay-show");
 
