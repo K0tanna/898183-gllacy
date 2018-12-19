@@ -15,9 +15,7 @@ body {
 	font-size: 16px;
 	line-height: 22px;
 	font-weight: 400;
-	color: #ffffff;
-
-	background-color: #849d8f;
+	color: #ffffff;	
 }
 
 a {
@@ -42,38 +40,64 @@ img {
   overflow: hidden;
 }
 
-.button {
-  display: inline-block;
-  vertical-align: middle;
-  
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 700;
-  text-align: center;
-  color: #fefefe;
-  
-  background-image: linear-gradient(180deg, #f26843 0%, #e74b36 100%);
-  border-radius: 22px;
-  border: none;
-  box-shadow: 0px 2px 2px 0px #9e4334;
+.site-wrapper {
+  background-color: #849d8f;
+  background-image: url("../img/slider-item1.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  transition: background-image 0.5s ease, background-color 0.5s ease;
 }
 
-.button:hover,
-.button:focus{
-  background-image: linear-gradient(180deg, #f58669 0%, #ec6f5e 100%);
-  box-shadow: 0px 2px 2px 0px #ac1000;
-  outline: none;
+.site-wrapper::before,
+.site-wrapper::after {
+  content: "";
+  visibility: hidden;
 }
 
-.button:active {
-  background-image: linear-gradient(180deg, #d74632 0%, #e1613e 100%);
-  box-shadow: inset 0px 2px 2px 0px #952718;
+.site-wrapper::before {
+  background-image: url("../img/slider-item2.png");
+}
+
+.site-wrapper::after {
+  background-image: url("../img/slider-item3.png");
+}
+
+.noimage {
+  background-image: none;
 }
 
 .page-wrapper {
   width: 1200px;
   margin: 0 auto;
   padding: 0 27px;
+}
+
+.button {
+  display: inline-block;
+  vertical-align: middle;  
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  text-align: center;
+  color: #fefefe;
+  background: #f26843;
+  background-image: linear-gradient(180deg, #f26843 0%, #e74a35 100%);
+  border-radius: 22px;
+  border: none;
+  box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus{
+  background-image: linear-gradient(180deg, #f58669 0%, #ec6f5e 100%);
+  box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 1);
+  outline: none;
+}
+
+.button:active {
+  background-image: linear-gradient(180deg, #d74632 0%, #e1613e 100%);
+  box-shadow: inset 0px 2px 2px 0px rgba(172, 16, 0, 1);
 }
 
 .main-header {
@@ -83,9 +107,7 @@ img {
 .main-navigation {
   display: flex;
   position: relative;
-  margin-top: 8px;
-  /*Временно*/
-  margin-bottom: 20px;
+  padding-top: 8px;
 }
 
 .main-heder-logo {
@@ -111,7 +133,6 @@ img {
   display: block;
   margin: 7px 14px;
   vertical-align: middle;
-
   color: #ffffff;
   line-height: 18px;
   font-weight: 700;
@@ -182,12 +203,10 @@ img {
   padding-bottom: 11px;
 }
 
-
 .submenu-item-new a {
   padding-top: 10px;
   padding-bottom: 13px;
-  font-weight: 700;
-  
+  font-weight: 700;  
 }
 
 .submenu::after {
@@ -236,7 +255,7 @@ img {
   line-height: 16px;
   font-weight: 500;
   color: #ffffff;
-  background-color: #a1b4a9;
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 15px;
 }
 
@@ -547,7 +566,92 @@ img {
   color: #ffffff;
 }
 
+.slider {
+  position: relative;
+  padding-top: 321px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.slider-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slide {
+  display: none;
+}
+
+.slide-title {
+  width: 700px;
+  margin: 0 auto;
+  margin-bottom: 27px;
+  
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 700;
+}
+
+.slide-button {
+  padding: 8px 42px;
+  font-size: 32px;
+  line-height: 44px;
+  font-weight: 700;
+  color: #ffffff;
+  vertical-align: top;
+  border-radius: 50px;  
+}
+
+.slider-controls label {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin-right: 8px;
+  vertical-align: top;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#product-1:checked ~ .site-wrapper {
+  background-color: #849d8f;
+  background-image: url("../img/slider-item1.png");
+}
+
+#product-2:checked ~ .site-wrapper {
+  background-color: #8996a6;
+  background-image: url("../img/slider-item2.png");
+}
+
+#product-3:checked ~ .site-wrapper {
+  background-color: #9d8b84;
+  background-image: url("../img/slider-item3.png");
+}
+
+#product-1:checked ~ .site-wrapper #slide1,
+#product-2:checked ~ .site-wrapper #slide2,
+#product-3:checked ~ .site-wrapper #slide3 {
+  display: block;
+}
+
+#product-1:checked ~ .site-wrapper label[for="product-1"],
+#product-2:checked ~ .site-wrapper label[for="product-2"],
+#product-3:checked ~ .site-wrapper label[for="product-3"] {
+  background-color: #ffffff;
+}
+
+.slider-controls {
+  position: absolute;
+  bottom: 24px;
+  left: 0;
+  z-index: 20;  
+  font-size: 0;
+}
+
 .features {
+  margin-top: 50px; /*Временно*/
   margin-bottom: 40px;
   padding: 25px 30px 20px 20px;
 
