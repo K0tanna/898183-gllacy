@@ -122,7 +122,7 @@
       </nav>
       <p class="contacts">
         С 10 до 20, ежедневно
-        <a href="tel:+7-812-450-25-25">8 812 450 25 25</a>
+        <a href="tel:+7-812-450-25-25">8&nbsp;812 450-25-25</a>
       </p>
     </header>
     <main>
@@ -134,7 +134,84 @@
       <h1 class="page-title">Сливочное мороженое</h1>
       <section class="catalog-filter">
         <h2 class="visually-hidden">Фильтр мороженого</h2>
-        <!-- Здесь будет форма -->
+        <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+          <div class="filter-field">
+            <div class="filter-title">
+              <label for="sorting">Сортировка:</label>
+            </div>
+            <div class="input-field filter-select">
+              <select name="sorting" id="sorting">
+                <option value="popular">по популярности</option>
+                <option value="price-increase">по возрастанию цены</option>
+                <option value="price-decrease">по убыванию цены</option>
+              </select>
+              <svg xmlns="http://www.w3.org/2000/svg" width="9" height="5" viewBox="0 0 9 5"><path d="M4.5 5L0 0h9z"/></svg>
+            </div>
+          </div>
+          <div class="filter-field filter-range">
+            <div class="filter-title range-title">Цена:</div>
+            <div class="price-controls">
+              <label class="min-price"><input type="text" name="min-price" value="100">руб.- </label>
+              <label class="max-price"><input type="text" name="max-price" value="500">руб.</label>
+            </div>
+            <div class="range-controls input-field">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="range-toggle range-toggle-min"></div>
+              <div class="range-toggle range-toggle-max"></div>
+            </div>
+          </div>
+          <div class="filter-field filter-radio">
+            <div class="filter-title radio-title">Жирность:</div>
+            <ul class="input-field">
+              <li class="filter-radio-option">
+                <input class="visually-hidden filter-input-radio" type="radio" name="fats" id="0" value="0">
+                <label for="0">0%</label>
+              </li>
+              <li class="filter-radio-option">
+                <input class="visually-hidden filter-input-radio" type="radio" name="fats" id="10" value="10" checked>
+                <label for="10">до 10%</label>
+              </li>
+              <li class="filter-radio-option">
+                <input class="visually-hidden filter-input-radio" type="radio" name="fats" id="until30" value="until30">
+                <label for="until30">до 30%</label>
+              </li>
+              <li class="filter-radio-option">
+                <input class="visually-hidden filter-input-radio" type="radio" name="fats" id="beyond30" value="beyond30">
+                <label for="beyond30">выше 30%</label>
+              </li>
+            </ul>
+          </div>
+          <div class="filter-field filter-chekbox">
+            <div class="filter-title">Наполнители:</div>
+            <ul class="input-field">
+              <li class="filter-checkbox-option">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="choko" id="choko" checked>
+                <label for="choko">шоколадные</label>
+              </li>
+              <li class="filter-checkbox-option">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="shugar" id="shugar" checked>
+                <label for="shugar">сахарные присыпки</label>
+              </li>
+              <li class="filter-checkbox-option">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="fruits" id="fruits">
+                <label for="fruits">фрукты</label>
+              </li>
+              <li class="filter-checkbox-option">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="syrup" id="syrup">
+                <label for="syrup">сиропы</label>
+              </li>
+              <li class="filter-checkbox-option">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="jam" id="jam">
+                <label for="jam">джемы</label>
+              </li>
+            </ul>
+          </div>
+          <button type="submit" class="filter-button filter-field">
+          Применить
+          </button>
+        </form>
       </section>
       <section class="catalog">
         <h2 class="visually-hidden">Каталог сливочного мороженого</h2>
