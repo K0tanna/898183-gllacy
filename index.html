@@ -45,7 +45,7 @@
             </ul>
             <ul class="user-navigation">
               <li class="search">
-                <a href="#"><span class="visually-hidden">Поиск</span>
+                <a class="search-link" href="#"><span class="visually-hidden">Поиск</span>
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17"><path d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/></svg>
               </a>
               <div class="popup popup-search">
@@ -56,7 +56,7 @@
               </div>
             </li>
             <li class="login">
-              <a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19"><g><path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/><path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/></g></svg>Вход</a>
+              <a class="login-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19"><g><path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/><path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/></g></svg>Вход</a>
               <div class="popup popup-login">
                 <h2 class="visually-hidden">Личный кабинет</h2>
                 <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
@@ -79,7 +79,7 @@
               </div>
             </li>
             <li class="basket basket-empty">
-              <a href="#">
+              <a class="basket-link basket-empty-link" href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"><g><path d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z"/><circle cx="6.984" cy="18" r="2"/><circle cx="15.984" cy="18" r="2"/></g></svg>
               Пусто</a>
             </li>
@@ -92,24 +92,24 @@
       </header>
       <section class="slider">
         <div class="slider-controls">
-          <label for="product-1">Первый</label>
-          <label for="product-2">Второй</label>
-          <label for="product-3">Третий</label>
+          <label for="product-1" tabindex="0">Первый</label>
+          <label for="product-2" tabindex="0">Второй</label>
+          <label for="product-3" tabindex="0">Третий</label>
         </div>
         <ul class="slider-list">
-          <li class="slider-item slide" id="slide1">
+          <li class="slider-item slide slide1" id="slide1">
             <h3 class="slide-title">
             Крем-брюле и пломбир с малиновым джемом
             </h3>
             <a class="button slide-button" href="#">Давайте оба!</a>
           </li>
-          <li class="slider-item slide" id="slide2">
+          <li class="slider-item slide slide2" id="slide2">
             <h3 class="slide-title">
             Шоколадный пломбир и лимонный сорбет
             </h3>
             <a class="button slide-button" href="#">Давайте оба!</a>
           </li>
-          <li class="slider-item slide" id="slide3">
+          <li class="slider-item slide slide3" id="slide3">
             <h3 class="slide-title">
             Пломбир с помадкой и клубничный щербет
             </h3>
@@ -123,12 +123,16 @@
           <div class="profit profit-raspberry">
             <h2>Малинка даром!</h2>
             <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-            <a class="button profit-button" href="#">Хочу варенье!</a>
+            <div class="right-container">
+              <a class="button profit-button" href="#">Хочу варенье!</a>
+            </div>
           </div>
           <div class="profit profit-chocolate">
             <h2>Шоколадки даром!</h2>
             <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-            <a class="button profit-button" href="#">Хочу шоколадки!</a>
+            <div class="right-container">
+              <a class="button profit-button" href="#">Хочу шоколадки!</a>
+            </div>
           </div>
         </section>
         <section class="catalog">
@@ -290,9 +294,11 @@
             <label class="visually-hidden" for="feedback-comment">Комментарий</label>
             <textarea class="feedback-form-comment" name="feedback-comment" id="feedback-comment" placeholder="Напишите что-нибудь..."></textarea>
           </p>
-          <button class="button feedback-button" type="submit" name="feedback-button">
-          Отправить
-          </button>
+          <div class="right-container">
+            <button class="button feedback-button" type="submit" name="feedback-button">
+              Отправить
+            </button>
+          </div>
         </form>
         <button class="modal-close" type="button">
         Закрыть
